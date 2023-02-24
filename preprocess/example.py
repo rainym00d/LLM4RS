@@ -4,7 +4,7 @@ import json
 work_dir = f"{os.environ['HOME']}/LLM4RS"
 os.chdir(work_dir)
 
-task_name = "test"
+task_name = "example"
 if not os.path.exists(f"data/{task_name}"):
     os.makedirs(f"data/{task_name}")
 

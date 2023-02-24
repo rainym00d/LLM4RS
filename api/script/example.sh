@@ -1,7 +1,7 @@
 WORK_DIR="${HOME}/LLM4RS"
 cd ${WORK_DIR}
 
-TASK_NAME="test"
+TASK_NAME="example"
 if [ ! -d "data/${TASK_NAME}" ]; then
   mkdir "data/${TASK_NAME}"
 fi
