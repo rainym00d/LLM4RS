@@ -1,16 +1,22 @@
 # Overview
 
-- 文件组织
+- structure
 
-    - preprocess：数据集预处理的文件夹
+    - ```preprocess```：数据集预处理的文件夹。
 
-    - api：调用openai ai的api的文件夹
+    - ```api```：调用openai ai的api的文件夹。
 
-    - eval：评测的文件夹
+    - ```eval```：评测的文件夹。
 
-    - data：中间过程文件存储的文件夹。
+    - ```data```：中间过程文件存储的文件夹。
 
-- 依次执行preprocess，api和eval，每一个任务都在data中创建一个文件夹，文件夹下有三个文件：origin.jsonl、response.jsonl和result，分别对应三个处理步骤产生的结果文件
+- workflow
+
+    1. 在```preprocess```文件夹中编写预处理数据集的代码，并设定好任务名称task_name，最后将处理好的数据集命名为```origin.jsonl```保存在```data/task_name```文件夹下。
+
+    2. 在```api```文件夹下调用脚本，得到返回的数据，返回的数据会以```response.jsonl```的命名保存在```data/task_name```文件夹下。
+
+    3. 调用```eval```文件夹下的评测脚本，结果数据会以```result.json```的命名保存在```data/task_name```文件夹下。
 
 # api
 
@@ -20,17 +26,23 @@
 
 - 重点关注以下几个参数
 
-    1. temperature
+    1. temperature：默认值1，取值范围0~2。数值越大生成的随机性越强。该参数与top_n之间一般只会同时使用一个。
 
-    2. top_p
+    2. top_p：默认值1，取值范围0~1。和temperature类似，也是一种采样方式。例子：0.1表示只会考虑头部的10%的token。该参数与temperature之间一般只会同时使用一个。
 
-    3. n
+    3. n：默认值1。控制返回的结果数量。
 
     4. logprobs
 
-    5. presence_penalty
+    5. presence_penalty：默认值0，取值范围-2~2。生成token时，若token出现过，则对它进行惩罚。数值越大，则惩罚力度越大，模型越容易返回新的话题。
 
-    6. frequency_penalty
+    6. frequency_penalty：默认值0，取值范围-2~2。生成token时，会根据token出现的频率对它进行惩罚。数值越大，则惩罚力度越大，模型约容易重复同样的句子。
+
+- question
+
+    1. resence_penalty和frequency_penalty参数看起来有点类似，区别在哪？
+
+    2. logprobs参数的返回值的意思？
 
 # tokenizer查询表
 
