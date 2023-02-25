@@ -8,7 +8,7 @@ task_name = "example"
 if not os.path.exists(f"data/{task_name}"):
     os.makedirs(f"data/{task_name}")
 
-filename = f"data/{task_name}/origin.jsonl"
+filename = f"data/{task_name}/request.jsonl"
 n_requests = 10
 
 # * json中的true和false用True和False代替，null用None代替

@@ -5,7 +5,7 @@ TASK_NAME="example"
 if [ ! -d "data/${TASK_NAME}" ]; then
   mkdir "data/${TASK_NAME}"
 fi
-REQUESTS_FILEPATH="data/${TASK_NAME}/origin.jsonl"
+REQUESTS_FILEPATH="data/${TASK_NAME}/request.jsonl"
 SAVE_FILEPATH="data/${TASK_NAME}/response.jsonl"
 
 REQUESTS_URL="https://api.openai.com/v1/completions"

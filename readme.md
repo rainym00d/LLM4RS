@@ -12,7 +12,7 @@
 
 - workflow
 
-    1. 在```preprocess```文件夹中编写预处理数据集的代码，并设定好任务名称task_name，最后将处理好的数据集命名为```origin.jsonl```保存在```data/task_name```文件夹下。
+    1. 在```preprocess```文件夹中编写预处理数据集的代码，并设定好数据集名称data_name和任务名称task_name，最后将处理好的数据集源文件命名为```origin.tsv``` or ```origin.csv```等，该文件用于后续评测获取标签等操作；将处理好的prompt文件命名为```request.jsonl```，该文件用于api参数发送。以上两个文件均保存在```data/data_name/task_name```文件夹下。
 
     2. 在```api```文件夹下调用脚本，得到返回的数据，返回的数据会以```response.jsonl```的命名保存在```data/task_name```文件夹下。
 
