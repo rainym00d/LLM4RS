@@ -1,0 +1,4 @@
+aiohttp==3.8.4
+pandas==1.5.3
+tiktoken==0.3.0
+xpflow==0.8

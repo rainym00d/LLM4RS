@@ -1,88 +1,153 @@
 # Overview
 
-- structure
+> Paper link: xxxxx
 
-    - ```preprocess```：数据集预处理的文件夹。
+This repository is the code for Paper name. 
 
-    - ```api```：调用openai ai的api的文件夹。
+# File Structure
 
-    - ```eval```：评测的文件夹。
+```shell
+.
+├── data  # * data path
+│   ├── Book
+│   ├── Movie
+│   ├── Music
+│   └── News
+├── data_preprocess_notebook  # * folder to save jupyter notbook for pre-processing data
+├── result  # * folder to save request、response、result、log
+├── script  # * folder to save run script
+└── src  # * source code
+    ├── api  # * code for access api
+    ├── postprocess  # * code for data post-processing
+    └── preprocess  # * code for data pre-processing
+```
 
-    - ```data```：中间过程文件存储的文件夹。
+# Dependencies
 
-- workflow
+This repository has the following dependency requirements.
 
-    1. 在```preprocess```文件夹中编写预处理数据集的代码，并设定好数据集名称data_name和任务名称task_name，最后将处理好的数据集源文件命名为```origin.tsv``` or ```origin.csv```等，该文件用于后续评测获取标签等操作；将处理好的prompt文件命名为```request.jsonl```，该文件用于api参数发送。以上两个文件均保存在```data/data_name/task_name```文件夹下。
+- python 3.9+
 
-    2. 在```api```文件夹下调用脚本，得到返回的数据，返回的数据会以```response.jsonl```的命名保存在```data/task_name```文件夹下。
+Other packages can be installed via `pip install -r requirements.txt`.
 
-    3. 调用```eval```文件夹下的评测脚本，结果数据会以```result.json```的命名保存在```data/task_name```文件夹下。
+# Usage
 
-# api
+0. Clone this repo.
 
-## completion任务
+    ```
+    git clone xxxx
+    ```
 
-- 参数编写参考链接：https://platform.openai.com/docs/api-reference/completions
+1. Download pre-processed data from xxxx. And then put them into `data` folder. If you want to use your own pre-processed data, you can use the jupyter notebook in `data_preprocess_notebook`. The raw data can be download from xxx.
 
-- 重点关注以下几个参数
+2. Edit the parameters in the `script/run.py` according to your own needs. (This code can be executed in batches, just write the parameters into a list.)
 
-    1. temperature：默认值1，取值范围0~2（or 0~1，存疑）。数值越大生成的随机性越强。该参数与top_n之间一般只会同时使用一个。
+3. Run `python script/run.py` in the root directory of the project.
 
-    2. top_p：默认值1，取值范围0~1。和temperature类似，也是一种采样方式。例子：0.1表示只会考虑头部的10%的token。该参数与temperature之间一般只会同时使用一个。
+4. Check the corresponding folder in the `result` directory and record the experimental results.
 
-    3. n：默认值1。控制返回的结果数量。
+# Example
 
-    4. logprobs
+```python
+cd xxxxx
 
-    5. presence_penalty：默认值0，取值范围-2~2。生成token时，若token出现过，则对它进行惩罚。数值越大，则惩罚力度越大，模型越容易返回新的话题。
+# * You should fill in your own api-key in script/run.py before run this command.
+python script/run.py 
+```
 
-    6. frequency_penalty：默认值0，取值范围-2~2。生成token时，会根据token出现的频率对它进行惩罚。数值越大，则惩罚力度越大，模型约容易重复同样的句子。
+# Parameter
+- `model`
 
-- question
+    - The model name of LLM.
 
-    1. resence_penalty和frequency_penalty参数看起来有点类似，区别在哪？
+    - Default: `"text-davinci-003"`
 
-    2. logprobs参数的返回值的意思？
+    - Option: `["text-davinci-002", "text-davinci-003", "gpt-3.5-turbo"]`
 
-# tokenizer查询表
+- `domain`
 
-``` python
-MODEL_TO_ENCODING: dict[str, str] = {
-    # text
-    "text-davinci-003": "p50k_base",
-    "text-davinci-002": "p50k_base",
-    "text-davinci-001": "r50k_base",
-    "text-curie-001": "r50k_base",
-    "text-babbage-001": "r50k_base",
-    "text-ada-001": "r50k_base",
-    "davinci": "r50k_base",
-    "curie": "r50k_base",
-    "babbage": "r50k_base",
-    "ada": "r50k_base",
-    # code
-    "code-davinci-002": "p50k_base",
-    "code-davinci-001": "p50k_base",
-    "code-cushman-002": "p50k_base",
-    "code-cushman-001": "p50k_base",
-    "davinci-codex": "p50k_base",
-    "cushman-codex": "p50k_base",
-    # edit
-    "text-davinci-edit-001": "p50k_edit",
-    "code-davinci-edit-001": "p50k_edit",
-    # embeddings
-    "text-embedding-ada-002": "cl100k_base",
-    # old embeddings
-    "text-similarity-davinci-001": "r50k_base",
-    "text-similarity-curie-001": "r50k_base",
-    "text-similarity-babbage-001": "r50k_base",
-    "text-similarity-ada-001": "r50k_base",
-    "text-search-davinci-doc-001": "r50k_base",
-    "text-search-curie-doc-001": "r50k_base",
-    "text-search-babbage-doc-001": "r50k_base",
-    "text-search-ada-doc-001": "r50k_base",
-    "code-search-babbage-code-001": "r50k_base",
-    "code-search-ada-code-001": "r50k_base",
-    # open source
-    "gpt2": "gpt2",
-}
+    - The domain name.
+
+    - Default: `"Movie"`
+
+    - Option: `["Movie", "Book", "Music", "News"]`
+
+- `task`
+
+    - The task name.
+
+    - Default: `"list"`
+
+    - Option: `["point", "pair", "list"]`
+
+- `no_instruction`
+
+    - Use instruction or not.
+
+    - Default: `False`
+
+    - Option: `[True, False]`
+
+- `example_num`
+
+    - The number of example given to model.
+
+    - Default: `1`
+
+    - Option: `[1, 2, 3, 4, 5]`
+
+- `begin_index`
+
+    - The begin index of data.
+
+    - Default: `5`
+
+    - Option: the integer bigger than 4 but less than the size of data
+
+- `end_index`
+
+    - The end index of data.
+
+    - Default: `505`
+
+    - Option: the integer bigger than `begin_index` but less than the size of data
+
+- `api_key`
+
+    - The api-key of openai which depends on your own openai account.
+
+- `max_requests_per_minute`
+
+    - Max request number per mins.
+
+    - Default: `2000`
+
+    - Option: The max value depends on your own openai account.
+
+- `max_tokens_per_minute`
+
+    - Max token number per mins.
+
+    - Default: `10000`
+
+    - Option: The max value depends on your own openai account.
+
+- `max_attempts`
+
+    - Max attempts per request.
+
+    - Default: `10`
+
+- `proxy`
+
+    - The proxy of your own.
+
+    - Default: `None`
+
+# Citation
+
+Please cite the following paper corresponding to the repository:
+
+```
+xxxx
 ```
