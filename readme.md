@@ -5,8 +5,8 @@ This is the official implementation of the paper "Probing ChatGPT for Recommenda
 The overall evaluation framework of LLMs for recommendation tasks is depicted as follows:
 
 <p float="left">
-  <img src="./assets/left.jpg" width="300" height="200" />
-  <img src="./assets/right.jpg" width="300" height="200"/> 
+  <img src="./assets/left.jpg" width="400" height="300" />
+  <img src="./assets/right.jpg" width="400" height="300"/> 
 </p>
 
 [[arXiv](https://arxiv.org/pdf/error.pdf)] 
