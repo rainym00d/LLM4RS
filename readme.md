@@ -10,13 +10,13 @@ The overall evaluation framework of LLMs for recommendation tasks is depicted as
   <img src="./assets/framework.jpg" height="300"/> 
 </p>
 
-[[arXiv](https://arxiv.org/pdf/error.pdf)] 
-
 The main result of different LLMs on four different domain datasets is presented as follows:
 
 <p>
   <img src="./assets/main_result.png" height="300"/> 
 </p>
+
+[[arXiv](https://arxiv.org/pdf/error.pdf)] 
 
 ## Quick Start
 
