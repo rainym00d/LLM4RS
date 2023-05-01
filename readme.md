@@ -14,7 +14,7 @@ The overall evaluation framework of LLMs for recommendation tasks is depicted as
 
 For details of datasets, please check file `xxx`.
 
-For details of prompts, please check file `xxx`.
+For details of prompts, please check file `assests/appendix.pdf`.
 
 ## File Structure
 
