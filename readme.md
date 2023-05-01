@@ -173,8 +173,7 @@ The required packages can be installed via `pip install -r requirements.txt`.
 
 
 # Citation
-
-Please cite the following paper corresponding to the repository:
+If you find our code or idea useful for your research, please cite our work.
 
 ```
 @inproceedings{LLM4REC_2023,
