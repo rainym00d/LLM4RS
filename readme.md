@@ -6,13 +6,13 @@ This is the official implementation of the paper "*Probing ChatGPT for Recommend
 
 The overall evaluation framework of LLMs for recommendation tasks is depicted as follows:
 
-<div style="text-align: center">
+<div align=center>
   <img src="./assets/framework.jpg" height="300"/> 
 </div>
 
 The main result of different LLMs on four different domain datasets is presented as follows:
 
-<div style="text-align: center">
+<div align=center>
   <img src="./assets/main_result.png" height="300"/> 
 </div>
 
