@@ -185,7 +185,7 @@ If you find our code or idea useful for your research, please cite our work.
 ```
 @inproceedings{LLM4REC_2023,
   author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
-  title={Probing ChatGPT for Recommendation: An Empirical Study from the Point-wise, Pair-wise, and List-wise Perspectives},
+  title={Uncovering ChatGPT's Capabilities in Recommender Systems},
   journal={arXiv preprint arXiv:xxx.xxxxx},
   year={2023}
 }
