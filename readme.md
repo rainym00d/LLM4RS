@@ -61,8 +61,10 @@ For details of prompts, please check file `assests/appendix.pdf`.
 
 # Example
 
-```python
-cd xxxxx
+```shell
+git clone https://github.com/rainym00d/LLM4RS.git
+
+cd LLM4RS
 
 # * You should fill in your own api-key in script/run.py before run this command.
 python script/run.py 
