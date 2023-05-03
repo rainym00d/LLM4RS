@@ -51,7 +51,7 @@ For details of prompts, please check file `assets/prompts.pdf`.
     git clone https://github.com/rainym00d/LLM4RS.git
     ```
 
-1. Download pre-processed data from [link](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2). And then put them into `data` folder. (If you want to use your own data, you can refer to our preprocess code in `data/data_process`.)
+1. Download pre-processed data from [here](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2). And then put them into `data` folder. (If you want to use your own data, you can refer to our preprocess code in `data/preprocess`.)
 
 2. Edit the parameters in the `script/run.py` according to your own needs. (This code can be executed in batches, just write the parameters into a list.)
 

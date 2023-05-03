@@ -3,8 +3,8 @@
 ### Description
 
 + Movie: We use the widely-adopted MovieLens-1M dataset  that contains 1M user ratings for movies. [Download](https://grouplens.org/datasets/movielens/1m/)
-+ Book: We use the "Books" subset of Amazon dataset that contains user ratings for books. [Download](http://jmcauley.ucsd.edu/data/amazon/}{http://jmcauley.ucsd.edu/data/amazon/)
-+ Music: We use the "CDs \& Vinyl" subset of Amazon to conduct experiments on the music domain. [Download](http://jmcauley.ucsd.edu/data/amazon/}{http://jmcauley.ucsd.edu/data/amazon/)
++ Book: We use the "Books" subset of Amazon dataset that contains user ratings for books. [Download](http://jmcauley.ucsd.edu/data/amazon/)
++ Music: We use the "CDs \& Vinyl" subset of Amazon to conduct experiments on the music domain. [Download](http://jmcauley.ucsd.edu/data/amazon/)
 + News: We use the MIND-small dataset as the benchmark for news domain. [Download](https://msnews.github.io/)
 
 ### Filter & Preprocess
@@ -22,7 +22,7 @@ For each dataset, we remain about 10,000 records for the final evaluation. If yo
 
 In our experiments, we remain the first 5 samples as the few-shot prompt examples and test on the rest samples.
 
-You can directly download our pre-processed data from [link](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2).
+You can directly download our pre-processed data from [here](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2).
 
 
 
