@@ -20,9 +20,11 @@ The main result of different LLMs on four different domain datasets is presented
 
 ## Quick Start
 
-For details of datasets, please check file `data/readme.md`.
+- For details of datasets, please check file `data/readme.md`.
 
-For details of prompts, please check file `assets/prompts.pdf`.
+- For details of prompts, please check file `assets/prompts.pdf`.
+
+- For detail of our result, please download from [here](https://drive.google.com/drive/folders/1rSvbnbSG_K-H4pPip8kao1UXFT9WiQ49?usp=sharing)
 
 ## File Structure
 
