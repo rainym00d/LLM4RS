@@ -51,7 +51,7 @@ For details of prompts, please check file `assets/prompts.pdf`.
     git clone https://github.com/rainym00d/LLM4RS.git
     ```
 
-1. Download pre-processed data from link xxxx. And then put them into `data` folder. If you want to use your own pre-processed data, you can use the jupyter notebook in `data_preprocess_notebook`. The raw data can be download from xxx.
+1. Download pre-processed data from link xxxx. And then put them into `data` folder. (If you want to use your own data, you can refer to our pre-process code in `data_preprocess_notebook`.)
 
 2. Edit the parameters in the `script/run.py` according to your own needs. (This code can be executed in batches, just write the parameters into a list.)
 
@@ -182,7 +182,7 @@ The required packages can be installed via `pip install -r requirements.txt`.
 
 
 # Citation
-If you find our code or idea useful for your research, please cite our work.
+If you find our code or work useful for your research, please cite our work.
 
 ```
 @inproceedings{LLM4REC_2023,
