@@ -9,9 +9,9 @@
 
 ### Filter & Preprocess
 
-For each dataset, we first filter the items without titles since we need titles in the prompts as the input of LLMs. Then we sort the interactions according to the timestamp for each user and drop the user that has few interactions. Finally, we get the top-K test data by constructing the candidate item list and the history interacted items. Specifically, for each record, we keep the ``n_history`` closest interaction items with positive feedback as history interacted items. And then we pair the target ground-truth positive items with randomly sampled ``n_candidate`` negative items from all the items with negative feedback to construct the candidate item list. Note that the candidate list will be shuffle since LLMs may be may be sensitive to index. ``n_history`` and ``n_candidate`` are parameters, you can change for your need. In our experiments, we set both of them as 5. And we also open-source the pre-processed data with ``n_history`` in [1, 3, 5, 10] and  ``n_candidate`` in [2, 5, 10].
+For each dataset, we first filter the items without titles since we need titles in the prompts as the input of LLMs. Then we sort the interactions according to the timestamp for each user and drop the user that has few interactions. Finally, we get the top-K test data by constructing the candidate item list and the history interacted items. Specifically, for each record, we keep the ``n_history`` closest interaction items with positive feedback as history interacted items. And then we pair the target ground-truth positive items with randomly sampled ``n_candidate`` negative items from all the items with negative feedback to construct the candidate item list. Note that the candidate list will be shuffle since LLMs may be may be sensitive to index. ``n_history`` and ``n_candidate`` are parameters, you can change for your need. In our experiments, we set both of them as 5. 
 
-For each dataset, we remain about 10,000 records for the final evaluation. If you want to remain more records, you can change our data-preprocessing code in ``data/preprocess`` folder. 
+For each dataset, we remain about 10,000 records for the final evaluation. If you want to remain more records, you can change our data-preprocessing code in ``data_process`` folder. 
 
 | Dataset | # Records |
 | :-----: | :-----: |
@@ -22,7 +22,7 @@ For each dataset, we remain about 10,000 records for the final evaluation. If yo
 
 In our experiments, we remain the first 5 samples as the few-shot prompt examples and test on the rest samples.
 
-You can directly download our pre-processed data from XXX.
+You can directly download our pre-processed data from [link](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2).
 
 
 
