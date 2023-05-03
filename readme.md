@@ -20,7 +20,7 @@ The main result of different LLMs on four different domain datasets is presented
 
 ## Quick Start
 
-For details of datasets, please check file `assets/data.md`.
+For details of datasets, please check file `data/readme.md`.
 
 For details of prompts, please check file `assets/prompts.pdf`.
 
@@ -32,8 +32,8 @@ For details of prompts, please check file `assets/prompts.pdf`.
 │   ├── Book
 │   ├── Movie
 │   ├── Music
-│   └── News
-├── data_preprocess_notebook  # * folder of jupyter notbooks for pre-processing data
+│   ├── News
+│   └── preprocess  # * folder of jupyter notbooks for pre-processing original dataset
 ├── result  # * folder to save requests、responses、results、logs
 ├── script  # * folder to save scripts
 └── src  # * source codes
@@ -51,7 +51,7 @@ For details of prompts, please check file `assets/prompts.pdf`.
     git clone https://github.com/rainym00d/LLM4RS.git
     ```
 
-1. Download pre-processed data from link xxxx. And then put them into `data` folder. (If you want to use your own data, you can refer to our pre-process code in `data_preprocess_notebook`.)
+1. Download pre-processed data from link xxxx. And then put them into `data` folder. (If you want to use your own data, you can refer to our preprocess code in `data/preprocess`.)
 
 2. Edit the parameters in the `script/run.py` according to your own needs. (This code can be executed in batches, just write the parameters into a list.)
 
