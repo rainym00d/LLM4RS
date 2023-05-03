@@ -53,7 +53,7 @@ The main result of different LLMs on four different domain datasets is presented
     git clone https://github.com/rainym00d/LLM4RS.git
     ```
 
-1. Download pre-processed data from [here](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2). And then put them into `data` folder. (If you want to use your own data, you can refer to our preprocess code in `data/preprocess`.)
+1. Download pre-processed data from [here](https://drive.google.com/drive/folders/1DOoa01emz4NaSINBUWS05F_0xDjBmP_2). And then put them into `data` folder. (If you want to use your own data, you can check the origin dataset link in `data/readme.md` and refer to our preprocess code in `data/preprocess`.)
 
 2. Edit the parameters in the `script/run.py` according to your own needs. (This code can be executed in batches, just write the parameters into a list.)
 
