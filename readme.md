@@ -16,7 +16,7 @@ The main result of different LLMs on four different domain datasets is presented
   <img src="./assets/main_result.png" height="300"/> 
 </div>
 
-[[arXiv](https://arxiv.org/pdf/error.pdf)] 
+[[arXiv](https://arxiv.org/pdf/2305.02182.pdf)] 
 
 ## Quick Start
 
@@ -190,7 +190,7 @@ If you find our code or work useful for your research, please cite our work.
 @inproceedings{LLM4REC_2023,
   author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
   title={Uncovering ChatGPT's Capabilities in Recommender Systems},
-  journal={arXiv preprint arXiv:xxx.xxxxx},
+  journal={arXiv preprint arXiv:2305.02182},
   year={2023}
 }
 ```
