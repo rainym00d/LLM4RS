@@ -9,9 +9,16 @@
 
 ## Filter & Preprocess
 
-For each dataset, we first filter the items without titles since we need titles in the prompts as the input of LLMs. Then we sort the interactions according to the timestamp for each user and drop the user that has few interactions. Finally, we get the top-K test data by constructing the candidate item list and the history interacted items. Specifically, for each record, we keep the ``n_history`` closest interaction items with positive feedback as history interacted items. And then we pair the target ground-truth positive items with randomly sampled ``n_candidate`` negative items from all the items with negative feedback to construct the candidate item list. Note that the candidate list will be shuffle since LLMs may be may be sensitive to index. ``n_history`` and ``n_candidate`` are parameters, you can change for your need. In our experiments, we set both of them as 5. 
 
-For each dataset, we remain about 10,000 records for the final evaluation. If you want to remain more records, you can change our data-preprocessing code in ``data_process`` folder. 
+For each dataset, we remove items that do not have a provided title, as we require the title of items as input for the LLMs.
+Next, we sort the interactions between users and items by their timestamps and remove users who have only a minimal amount of interactions.
+Finally, we construct sets of candidate items and gather the sequences of items that the users had previously interacted with.
+Specifically, for each test record, we gather the ``n_history`` latest interacted items with positive feedback as user history.
+To construct the candidate set for testing, we consider the item actually interacted with as the positive sample, and randomly sample N-1 items as negative samples for each selected interaction.
+Note that we shuffle the candidate list because that LLMs may be sensitive to the indexes of candidates.
+``n_history`` and ``n_candidate`` are parameters, which can be customized according to your needs. In our experiments, we set both of them as 5. 
+
+Each dataset contains around 10,000 records for the final evaluation. If you want to remain more records, you can change our data-preprocessing codes in ``data_process`` folder. 
 
 | Dataset | # Records |
 | :-----: | :-----: |
