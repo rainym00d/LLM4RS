@@ -16,7 +16,9 @@ The main result of different LLMs on four different domain datasets is presented
 <div align=center>
   <img src="./assets/main_result.png" height="300"/> 
 </div>
-
+<div align=center>
+  <img src="./assets/result_CF.jpg" height="140"/> 
+</div>
 
 ## Quick Start
 
