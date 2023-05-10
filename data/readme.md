@@ -20,12 +20,17 @@ Note that we shuffle the candidate list because that LLMs may be sensitive to th
 
 Each dataset contains around 10,000 records for the final evaluation. If you want to remain more records, you can change our data-preprocessing codes in ``data_process`` folder. 
 
-| Dataset | # Records |
+<!-- | Dataset | # Records |
 | :-----: | :-----: |
 |  Movie  |  99,38  |
 |  Book   | 10,269  |
 |  Music  |  90,90  |
-|  News   | 10,000  |
+|  News   | 10,000  | -->
+
+
+| **Dataset** | Movie | Book | Music | News |
+| :-: | :-: | :-: | :-: | :-: |
+| **# Records** | 99,38 | 10,269 | 90,90 | 10,000 |
 
 In our experiments, we remain the first 5 samples as the few-shot prompt examples and test on the rest samples.
 
