@@ -75,7 +75,7 @@ def process_davinci_list_result(response_path: str, candidate_num: int) -> Tuple
                 # * process 0-shot
                 if response["choices"][0]["logprobs"] is not None:
                     top_logprobs = response["choices"][0]["logprobs"]["top_logprobs"][0]
-                    res = [ord(k) - ord("A")for k in top_logprobs.keys()]
+                    res = [ord(k) - ord("A") for k in top_logprobs.keys()]
                 # * process few-shot
                 else:
                     text = response["choices"][0]["text"].strip()
