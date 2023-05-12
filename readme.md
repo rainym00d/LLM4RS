@@ -189,7 +189,7 @@ The required packages can be installed via `pip install -r requirements.txt`.
 If you find our code or work useful for your research, please cite our work.
 
 ```
-@inproceedings{LLM4REC_2023,
+@article{LLM4REC_2023,
   author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
   title={Uncovering ChatGPT's Capabilities in Recommender Systems},
   journal={arXiv preprint arXiv:2305.02182},
