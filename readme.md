@@ -190,8 +190,8 @@ If you find our code or work useful for your research, please cite our work.
 
 ```
 @article{LLM4REC_2023,
-  author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
   title={Uncovering ChatGPT's Capabilities in Recommender Systems},
+  author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
   journal={arXiv preprint arXiv:2305.02182},
   year={2023}
 }
