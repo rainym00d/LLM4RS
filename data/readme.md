@@ -7,8 +7,14 @@
 + Music: We use the "CDs \& Vinyl" subset of Amazon to conduct experiments on the music domain. [Download](http://jmcauley.ucsd.edu/data/amazon/)
 + News: We use the MIND-small dataset as the benchmark for news domain. [Download](https://msnews.github.io/)
 
-## Filter & Preprocess
+| Dataset | # User | # Item | # Interaction | # Sparsity |
+| :-----: | :-----: | :-: |  :-: |  :-: |
+|  Movie  | 6,040 | 3,706 | 1,000,209 | 95.53% |
+|  Book   | 8,026,324 | 2,330,066 | 22,507,155 | 99.99% | 
+|  Music  | 1,578,597 | 486,360 | 3,749,004 | 99.99% |
+|  News   | 50,000 | 42,416 | 73,152 | 99.99% | 
 
+## Filter & Preprocess
 
 For each dataset, we remove items that do not have a provided title, as we require the title of items as input for the LLMs.
 Next, we sort the interactions between users and items by their timestamps and remove users who have only a minimal amount of interactions.
@@ -19,14 +25,6 @@ Note that we shuffle the candidate list because that LLMs may be sensitive to th
 ``n_history`` and ``n_candidate`` are parameters, which can be customized according to your needs. In our experiments, we set both of them as 5. 
 
 Each dataset contains around 10,000 records for the final evaluation. If you want to remain more records, you can change our data-preprocessing codes in ``data_process`` folder. 
-
-<!-- | Dataset | # Records |
-| :-----: | :-----: |
-|  Movie  |  99,38  |
-|  Book   | 10,269  |
-|  Music  |  90,90  |
-|  News   | 10,000  | -->
-
 
 | **Dataset** | Movie | Book | Music | News |
 | :-: | :-: | :-: | :-: | :-: |
