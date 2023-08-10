@@ -1,6 +1,6 @@
 # Overview
 
-This is the official implementation of the paper "*Uncovering ChatGPT's Capabilities in Recommender Systems*". [[arXiv](https://arxiv.org/pdf/2305.02182.pdf)] 
+This is the official implementation of RecSys2023 paper "*Uncovering ChatGPT's Capabilities in Recommender Systems*". [[arXiv](https://arxiv.org/pdf/2305.02182.pdf)] 
 
 
 > ***Abstract:*** The debut of ChatGPT has recently attracted the attention of the natural language processing community and beyond. Existing studies have demonstrated that ChatGPT shows significant improvement in a range of downstream NLP tasks, but the capabilities and limitations of ChatGPT in terms of recommendations remain unclear. In this study, we aim to conduct an empirical analysis of ChatGPT's recommendation ability from an Information Retrieval (IR) perspective, including point-wise, pair-wise, and list-wise ranking. To achieve this goal, we re-formulate the above three recommendation policies into a domain-specific prompt format. Through extensive experiments on four datasets from different domains, we demonstrate that ChatGPT outperforms other large language models across all three ranking policies. Based on the analysis of unit cost improvements, we identify that ChatGPT with list-wise ranking achieves the best trade-off between cost and performance compared to point-wise and pair-wise ranking. Moreover, ChatGPT shows the potential for mitigating the cold start problem and explainable recommendation.
@@ -194,7 +194,9 @@ If you find our code or work useful for your research, please cite our work.
 @article{LLM4REC_2023,
   title={Uncovering ChatGPT's Capabilities in Recommender Systems},
   author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
-  journal={arXiv preprint arXiv:2305.02182},
+  url = {https://doi.org/10.1145/3604915.3610646},
+  doi={10.1145/3604915.3610646},
+  booktitle={Proceedings of the 17th ACM Conference on Recommender Systems},
   year={2023}
 }
 ```
