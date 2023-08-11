@@ -191,7 +191,7 @@ The required packages can be installed via `pip install -r requirements.txt`.
 If you find our code or work useful for your research, please cite our work.
 
 ```
-@inproceedings{LLM4REC_2023,
+@inproceedings{dai2023uncovering,
   title={Uncovering ChatGPT's Capabilities in Recommender Systems},
   author={Dai, Sunhao and Shao, Ninglu and Zhao, Haiyuan and Yu, Weijie and Si, Zihua and Xu, Chen and Sun, Zhongxiang and Zhang, Xiao and Xu, Jun},
   booktitle={Proceedings of the 17th ACM Conference on Recommender Systems},
