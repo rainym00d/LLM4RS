@@ -16,7 +16,7 @@ def ndcg_score(y_true: Dict[int, List[int]], y_pred: Dict[int, List[int]], topk:
             for i in range(k):
                 if value[i] in y_true[key]:
                     dcg += 1 / (math.log2(i + 2))
-            for i in range(len(y_true[key])):
+            for i in range(min(k,len(y_true[key]))):
                 idcg += 1 / (math.log2(i + 2))
             ndcg += dcg / idcg
         ndcg_result[f"NDCG@{k}"] = ndcg / len(y_pred)
@@ -94,7 +94,7 @@ def map_score(y_true: Dict[int, List[int]], y_pred: Dict[int, List[int]], topk: 
                     rel_count += 1
                     precision_sum += rel_count / (i + 1)
             if rel_count != 0:
-                average_precision = precision_sum / rel_count
+                average_precision = precision_sum / len(y_true[key])
             mean_average_precision += average_precision
         map_result[f"MAP@{k}"] = mean_average_precision / len(y_pred)
 
