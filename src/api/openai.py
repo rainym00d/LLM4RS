@@ -184,6 +184,8 @@ class APIRequest:
         """Calls the OpenAI API and saves results."""
         logging.info(f"Starting request #{self.task_id}")
         error = None
+        if proxy == "None":
+            proxy = None
         try:
             async with aiohttp.ClientSession() as session:
                 async with session.post(
